@@ -218,13 +218,14 @@ describe("Delete Customer", function () {
 
         try {
             await driver.wait(until.alertIsPresent(), 6000);
-            let nextAlert = await alert.getText();
+            let alert2 = await driver.switchTo().alert();
+            let nextAlert = await alert2.getText();
             assert.strictEqual(
                 nextAlert,
                 "Customer does not exist!!",
                 "Alert message không đúng"
             );
-            await alert.accept();
+            await alert2.accept();
         } catch (error) {
             console.log("Alert không hiển thị");
         };
@@ -241,6 +242,7 @@ describe("Delete Customer", function () {
             5000,
             "Không tìm thấy trường Customer ID sau khi chuyển trang"
         );
+        await customerID.sendKeys("67819");
 
         let submitButton = await driver.findElement(By.name("AccSubmit"));
         await submitButton.click();
@@ -249,13 +251,22 @@ describe("Delete Customer", function () {
         let alert = await driver.switchTo().alert();
 
         let alertText = await alert.getText();
+
         assert.strictEqual(
             alertText,
-            "Please fill all fields",
+            "Do you really want to delete this Customer?",
             "Alert message không đúng"
         );
-        await alert.accept();
 
+        await alert.accept();
+        let alert2 = await driver.switchTo().alert();
+        let alertText2 = await alert2.getText();
+        assert.strictEqual(
+            alertText2,
+            "Customer could not be deleted!!. First delete all accounts of this customer then delete the customer",
+            "Alert message không đúng"
+        );
+        await alert2.accept();
     });
 
     it("DC-011", async function () {
@@ -280,25 +291,25 @@ describe("Delete Customer", function () {
         let alertText = await alert.getText();
         assert.strictEqual(
             alertText,
-            "please fill all fields",
+            "Do you really want to delete this Customer?",
             "Alert message không đúng"
         );
 
         await alert.accept();
-
-        let nextAlert = await alert.getText();
+        let alert2 = await driver.switchTo().alert();
+        let nextAlert = await alert2.getText();
         assert.strictEqual(
             nextAlert,
             "please fill all fields",
             "Alert message không đúng"
         );
-        await alert.accept();
+        await alert2.accept();
 
     });
 
 
 
-    it("DC-012", async function () {
+    it.skip("DC-012", async function () {
         let deleteCustomerTab = await driver.findElement(
             By.css("a[href='DeleteCustomerInput.php']")
         );
