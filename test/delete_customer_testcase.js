@@ -90,7 +90,7 @@ describe("Delete Customer", function () {
             "",
             "Message hiển thị sai, không đúng yêu cầu"
         );
-    }); //làm cách nào để check điều kiện đã tồn tại customer ID
+    });
 
     it("DC-005", async function () {
         let deleteCustomerTab = await driver.findElement(
@@ -234,7 +234,7 @@ describe("Delete Customer", function () {
         let deleteCustomerTab = await driver.findElement(
             By.css("a[href='DeleteCustomerInput.php']")
         );
-        
+
         await deleteCustomerTab.click();
         let customerID = await driver.wait(
             until.elementLocated(By.name("cusid")),
@@ -258,7 +258,7 @@ describe("Delete Customer", function () {
 
     });
 
-    it("DC-012", async function () {
+    it("DC-011", async function () {
         let deleteCustomerTab = await driver.findElement(
             By.css("a[href='DeleteCustomerInput.php']")
         );
@@ -269,7 +269,7 @@ describe("Delete Customer", function () {
             5000,
             "Không tìm thấy trường Customer ID sau khi chuyển trang"
         );
-        await customerID.sendKeys("47720");
+        await customerID.sendKeys("");
 
         let resetButton = await driver.findElement(By.name("res"));
         await resetButton.click();
@@ -280,7 +280,7 @@ describe("Delete Customer", function () {
         let alertText = await alert.getText();
         assert.strictEqual(
             alertText,
-            "Do you really want to delete this Customer?",
+            "please fill all fields",
             "Alert message không đúng"
         );
 
