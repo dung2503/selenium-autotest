@@ -30,8 +30,8 @@ describe("New customer", function () {
     let uid = await driver.findElement(By.name("uid"));
     let password = await driver.findElement(By.name("password"));
     let loginButton = await driver.findElement(By.name("btnLogin"));
-    await uid.sendKeys("mngr599495");
-    await password.sendKeys("enAzUny");
+    await uid.sendKeys("mngr603316");
+    await password.sendKeys("AsanehA");
     await loginButton.click();
   });
 
@@ -66,7 +66,7 @@ describe("New customer", function () {
     );
     await newCustomerTab.click();
 
-    // Nhập giá trị Trống vào ô customer name
+    // Nhập giá trị Trống vào ô Customer Name
     let customerName = await driver.wait(
       until.elementLocated(By.name("name")),
       5000,
@@ -931,7 +931,7 @@ describe("New customer", function () {
     let submitButton = await driver.findElement(By.name("sub"));
     await submitButton.click();
 
-    await driver.wait(until.alertIsPresent(), 6000);
+    await driver.wait(until.alertIsPresent(), 9000);
     let alert = await driver.switchTo().alert();
 
     let alertText = await alert.getText();
@@ -1126,7 +1126,8 @@ describe("New customer", function () {
       5000,
       "Không tìm thấy Customer Registered Successfully!!!"
     );
-    assert.strictEqual(headingSuccess, "Customer Registered Successfully!!!", "Not Successful!");
+    let headingSuccessText = await headingSuccess.getText();
+    assert.strictEqual(headingSuccessText, "Customer Registered Successfully!!!", "Not Successful!");
     const customerNameResult = await driver.findElement(By.xpath("//td[text()='Customer Name']/following-sibling::td")).getText();
     assert.strictEqual(customerNameResult === "Aisha", true, `Expected Aisha, but got ${customerName}`);
 
@@ -1329,7 +1330,6 @@ describe("New customer", function () {
     );
   });
 
-  //case 26 và case 48 
   it.skip("NC-048", async function () {
     let newCustomerTab = await driver.findElement(
       By.css("a[href='addcustomerpage.php']")

@@ -11,18 +11,18 @@ describe("New account", function () {
         const domains = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com"];
         const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
         const randomString = (length) => {
-          let result = "";
-          for (let i = 0; i < length; i++) {
-            result += characters.charAt(Math.floor(Math.random() * characters.length));
-          }
-          return result;
+            let result = "";
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
         };
-    
+
         const username = randomString(8); // Tạo phần tên người dùng ngẫu nhiên dài 8 ký tự
         const domain = domains[Math.floor(Math.random() * domains.length)]; // Chọn một domain ngẫu nhiên
         return `${username}@${domain}`;
-      }
-    
+    }
+
 
     before(async function () {
         driver = await new Builder().forBrowser("chrome").build();
@@ -31,8 +31,8 @@ describe("New account", function () {
         let uid = await driver.findElement(By.name("uid"));
         let password = await driver.findElement(By.name("password"));
         let loginButton = await driver.findElement(By.name("btnLogin"));
-        await uid.sendKeys("mngr599495");
-        await password.sendKeys("enAzUny");
+        await uid.sendKeys("mngr603316");
+        await password.sendKeys("AsanehA");
         await loginButton.click();
     });
 
@@ -101,7 +101,7 @@ describe("New account", function () {
             "Không tìm thấy trường customerID sau khi chuyển trang"
         );
 
-        await customerID.sendKeys("47720");
+        await customerID.sendKeys("80695");
         let message = await driver.findElement(By.id("message14"));
         let barone = await driver.findElement(By.css("h2.barone"));
         await barone.click();
@@ -460,7 +460,7 @@ describe("New account", function () {
             5000,
             "Không tìm thấy trường Customer ID sau khi chuyển trang"
         );
-        await customerID.sendKeys("47720");
+        await customerID.sendKeys("19200");
 
         let type = await driver.wait(
             until.elementLocated(By.name("selaccount")),
@@ -489,22 +489,22 @@ describe("New account", function () {
         assert.strictEqual(await headingSuccess.getText(), "Account Generated Successfully!!!", "Không tìm thấy title 'Account Generated Successfully!!!'");
 
         const customerId = await driver.findElement(By.xpath("//td[text()='Customer ID']/following-sibling::td")).getText();
-        assert.strictEqual(customerId === "47720", true , `Expected 47720, but got ${customerID}`);
+        assert.strictEqual(customerId === "19200", true, `Expected 19200, but got ${customerID}`);
 
         const customerName = await driver.findElement(By.xpath("//td[text()='Customer Name']/following-sibling::td")).getText();
-        assert.strictEqual(customerName === "Aiaa", true , `Expected Aiaa, but got ${customerName}`);
+        assert.strictEqual(customerName === "Aiaa", true, `Expected Aiaa, but got ${customerName}`);
 
         const email = await driver.findElement(By.xpath("//td[text()='Email']/following-sibling::td")).getText();
-        assert.strictEqual(email === "phanhoangdung144+c1@gmail.com", true , `Expected phanhoangdung144+c1@gmail.com, but got ${email}`);
+        assert.strictEqual(email === "phanhoangdung144+m4@gmail.com", true, `Expected phanhoangdung144+m4@gmail.com, but got ${email}`);
 
         const accountType = await driver.findElement(By.xpath("//td[text()='Account Type']/following-sibling::td")).getText();
-        assert.strictEqual(accountType === "Savings", true , `Expected Savings, but got ${type}`);
+        assert.strictEqual(accountType === "Savings", true, `Expected Savings, but got ${type}`);
 
         const dateOfOpening = await driver.findElement(By.xpath("//td[text()='Date of Opening']/following-sibling::td")).getText();
-        assert.strictEqual(dateOfOpening === "2024-12-12", true , `Expected 2024-12-12, but got ${dateOfOpening}`);
+        assert.strictEqual(dateOfOpening === "2024-12-16", true, `Expected 2024-12-16, but got ${dateOfOpening}`);
 
         const currentAmount = await driver.findElement(By.xpath("//td[text()='Current Amount']/following-sibling::td")).getText();
-        assert.strictEqual(currentAmount === "1221", true , `Expected 1221, but got ${initialDeposit}`);
+        assert.strictEqual(currentAmount === "1221", true, `Expected 1221, but got ${initialDeposit}`);
     });
 
     it("NA-019", async function () {

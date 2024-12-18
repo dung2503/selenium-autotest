@@ -15,8 +15,8 @@ describe("Delete Customer", function () {
         let uid = await driver.findElement(By.name("uid"));
         let password = await driver.findElement(By.name("password"));
         let loginButton = await driver.findElement(By.name("btnLogin"));
-        await uid.sendKeys("mngr599495");
-        await password.sendKeys("enAzUny");
+        await uid.sendKeys("mngr603316");
+        await password.sendKeys("AsanehA");
         await loginButton.click();
     });
 
@@ -79,7 +79,7 @@ describe("Delete Customer", function () {
             5000,
             "Không tìm thấy trường Customer ID sau khi chuyển trang"
         );
-        await customerID.sendKeys("63800");
+        await customerID.sendKeys("19200");
 
         let message = await driver.findElement(By.id("message14"));
         let barone = await driver.findElement(By.css("h2.barone"));
@@ -242,7 +242,7 @@ describe("Delete Customer", function () {
             5000,
             "Không tìm thấy trường Customer ID sau khi chuyển trang"
         );
-        await customerID.sendKeys("67819");
+        await customerID.sendKeys("19200");
 
         let submitButton = await driver.findElement(By.name("AccSubmit"));
         await submitButton.click();
@@ -307,8 +307,6 @@ describe("Delete Customer", function () {
 
     });
 
-
-
     it.skip("DC-012", async function () {
         let deleteCustomerTab = await driver.findElement(
             By.css("a[href='DeleteCustomerInput.php']")
@@ -320,7 +318,7 @@ describe("Delete Customer", function () {
             5000,
             "Không tìm thấy trường Customer ID sau khi chuyển trang"
         );
-        await customerID.sendKeys("63800");
+        await customerID.sendKeys("19200");
 
         let resetButton = await driver.findElement(By.name("res"));
         await resetButton.click();

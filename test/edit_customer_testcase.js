@@ -14,8 +14,8 @@ describe("Edit Customer", function () {
     let uid = await driver.findElement(By.name("uid"));
     let password = await driver.findElement(By.name("password"));
     let loginButton = await driver.findElement(By.name("btnLogin"));
-    await uid.sendKeys("mngr599495");
-    await password.sendKeys("enAzUny");
+    await uid.sendKeys("mngr603316");
+    await password.sendKeys("AsanehA");
     await loginButton.click();
   });
 
@@ -80,7 +80,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -119,7 +119,7 @@ describe("Edit Customer", function () {
     assert.strictEqual(mobileNo === "987654321", true, `Expected 987654321, but got ${mobileNo}`);
 
     const email = await driver.findElement(By.xpath("//td[text()='E-mail']/following-sibling::td/input")).getAttribute("value");
-    assert.strictEqual(email === "phanhoangdung144+c1@gmail.com", true, `Expected phanhoangdung144+c1@gmail.com, but got ${email}`);
+    assert.strictEqual(email === "phanhoangdung144+m4@gmail.com", true, `Expected phanhoangdung144+m4@gmail.com, but got ${email}`);
 
   });
 
@@ -220,11 +220,6 @@ describe("Edit Customer", function () {
     );
   });
 
-
-
-
-
-
   it("EC-009", async function () {
     let editCustomerTab = await driver.findElement(
       By.css("a[href='EditCustomer.php']")
@@ -236,7 +231,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -270,7 +265,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -304,7 +299,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -338,7 +333,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -373,7 +368,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -408,7 +403,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -443,7 +438,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -478,7 +473,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -513,7 +508,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -548,7 +543,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -583,7 +578,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -618,7 +613,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -653,7 +648,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -688,7 +683,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -723,7 +718,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -758,7 +753,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -793,7 +788,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -828,7 +823,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -863,7 +858,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -899,7 +894,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -934,7 +929,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -969,7 +964,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1004,7 +999,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1039,7 +1034,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1074,7 +1069,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1109,7 +1104,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1144,7 +1139,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1179,7 +1174,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1214,7 +1209,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1249,7 +1244,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1318,7 +1313,7 @@ describe("Edit Customer", function () {
     assert.strictEqual(await driver.findElement(By.name("state")).getAttribute("value"), 'Lien Chieu', 'Trường State không được reset');
     assert.strictEqual(await driver.findElement(By.name("pinno")).getAttribute("value"), '250303', 'Trường PIN không được reset');
     assert.strictEqual(await driver.findElement(By.name("telephoneno")).getAttribute("value"), '987654321', 'Trường Mobile Number không được reset');
-    assert.strictEqual(await driver.findElement(By.name("emailid")).getAttribute("value"), 'phanhoangdung144+c1@gmail.com', 'Trường E-mail không được reset');
+    assert.strictEqual(await driver.findElement(By.name("emailid")).getAttribute("value"), 'phanhoangdung144+m4@gmail.com', 'Trường E-mail không được reset');
   });
 
   it.skip("EC-040", async function () {
@@ -1332,7 +1327,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1417,7 +1412,7 @@ describe("Edit Customer", function () {
       5000,
       "Không tìm thấy trường customerID sau khi chuyển trang"
     );
-    await customerIDField.sendKeys("47720");
+    await customerIDField.sendKeys("19200");
 
     let submitButton = await driver.findElement(By.name("AccSubmit"));
     await submitButton.click();
@@ -1437,6 +1432,6 @@ describe("Edit Customer", function () {
     await alert.accept();
   });
 
-  
+
 
 });
